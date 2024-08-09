@@ -1,0 +1,293 @@
+:root {
+  --light-blue-100: #F3F5FC;
+  --light-blue-200: #EFF1FA;
+  --dark-blue-300: #0A3871;
+  --dark-blue-400: #072B61;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+  font-family: 'Inter', sans-serif;
+  --font-size-primary: 32px;
+  --font-size-secondary: 24px;
+  --font-size-terciary: 16px;
+  --font-size-quaternary: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--light-blue-100);
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  min-height: 100%;
+  gap: 40px;
+}
+
+.encrypter {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 680px;
+  margin-top: 96px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-to-encrypt {
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 24px;
+  font-size: var(--font-size-primary);
+  background-color: var(--light-blue-100);
+  border-style: none;
+  resize: none;
+  padding: 12px;
+  color: var(--dark-blue-300);
+  cursor: auto;
+  scrollbar-width: none;
+  scrollbar-color: var(--dark-blue-300) var(--light-blue-100);
+}
+
+.text-to-encrypt:placeholder {
+  color: var(--dark-blue-300);
+}
+
+.text-to-encrypt:focus {
+  outline: none;
+  border: 2px solid var(--dark-blue-300);
+  border-radius: 24px;
+}
+
+.text-encrypted-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: cennter;
+  max-width: 100%;
+  flex: 1 1 400px;
+  gap: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 32px;
+  background-color: #fff;
+  box-shadow: 0px 24px 32px -8px var(--light-blue-100);
+}
+
+.text-encrypted {
+  margin-top: 32px;
+  font-size: var(--font-size-secondary);
+  color: var(--gray-400);
+  display: none;
+  border-style: none;
+  resize: none;
+  cursor: auto;
+  scrollbar-width: none;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.text-encrypted:focus {
+  outline: none;
+}
+
+.text-encrypted-container div {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text-encrypted-container button {
+  display: none;
+  align-self: flex-end;
+  width: 100%;
+}
+
+#logo {
+  height: 48px;
+  padding-left: 44px;
+  padding-right: 44px;
+  margin-left: 40px;
+  margin-top: 40px;
+  flex: 1 1 32px;
+}
+
+.main-section {
+  display: flex;
+  width: 100%;
+  gap: 80px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.non-encrypted h2 {
+  margin-bottom: 16px;
+  margin-top: 32px;
+  font-size: var(--font-size-secondary);
+  font-weight: bold;
+}
+
+.non-encrypted p {
+  font-size: var(--font-size-terciary);
+}
+
+#person {
+  width: 336;
+  max-width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.blue-button {
+  color: #fff;
+  background-color: var(--dark-blue-300);
+  border-style: none;
+}
+
+.blue-button:hover {
+  cursor: pointer;
+  background-color: var(--dark-blue-400);
+}
+
+.white-button:hover {
+  cursor: pointer;
+  background-color: var(--light-blue-200);
+}
+
+.white-button {
+  background-color: #fff;
+  color: var(--dark-blue-300);
+  border: 1px solid var(--dark-blue-300);
+}
+
+.white-button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.element-button {
+  flex-grow: 1;
+}
+
+button {
+  border-radius: 24px;
+  height: 67px;
+  font-size: var(--font-size-terciary);
+  margin-bottom: 32px;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: var(--font-size-quaternary);
+  color: var(--gray-400)
+}
+
+footer {
+  text-align: center;
+  color: var(--dark-blue-400);
+  font-size: var(--font-size-quaternary);
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (768px <=width <=1024px) {
+  main {
+    flex-direction: column;
+  }
+
+  .main-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  #logo {
+    padding-left: 40px;
+    margin-left: 0px;
+  }
+
+  .encrypter {
+    margin-top: 0px;
+  }
+
+  #person {
+    display: none;
+  }
+
+  .text-encrypted-container {
+    flex: 1 1 200px;
+  }
+
+  .non-encrypted h2 {
+    margin-top: 16px;
+  }
+
+  .text-encrypted {
+    height: 200px;
+  }
+}
+
+@media (width < 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .main-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 16px
+  }
+
+  #logo {
+    padding-left: 40px;
+    margin-left: 0px;
+  }
+
+  .encrypter {
+    margin-top: 0px;
+    flex: 1 1 700px;
+  }
+
+  #person {
+    display: none;
+  }
+
+  .text-encrypted-container {
+    flex: 1 1 200px;
+  }
+
+  .non-encrypted h2 {
+    margin-top: 8px;
+  }
+
+  .text-encrypted {
+    height: 200px;
+  }
+}
