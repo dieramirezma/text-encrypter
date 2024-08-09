@@ -32,31 +32,18 @@ Las características del encriptador son las siguientes:
   Contiene un botón que copia el texto encriptado/desencriptado para la sección de transferencia, es decir, mantiene la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
 
 ## Interfaces
-<img src="assets/pc.png" alt="Computador">
-<p style="text-align: center; font-size: 12px"><em>Figura 1: Computadores.</em></p>
-<div style="display: flex; text-align: center">
-  <div style="height: 100%">
-    <img src="assets/tablet.png" alt="Tablet" width="50%">
-    <p style="text-align: center; font-size: 12px"><em>Figura 2: Tablets.</em></p>
-  </div>
-  <div style="height: 100%">
-    <img src="assets/smartphone.png" alt="Smartphone" width="54%">
-    <p style="text-align: center; font-size: 12px"><em>Figura 3: Smartphone.</em></p>
-  </div>
-</div>
+
+![Interfaces](https://github.com/user-attachments/assets/4bb8999a-e44d-4bb6-9e71-0be7a08e3e12)
+<p style="text-align: center; font-size: 12px"><em>Figura 1: Diseño en diferentes resoluciones</em></p>
 
 ## Demo
-<video width="600" controls>
-  <source src="assets/demo.mp4" type="video/mp4">
-  Tu navegador no soporta la etiqueta de video.
-</video>
-<p style="text-align: center; font-size: 12px"><em>Figura 4: Demo.</em></p>
+https://github.com/user-attachments/assets/de87b0a7-c7e9-498b-87ec-b4de97c2b7df
+<p style="text-align: center; font-size: 12px"><em>Video 1: Demo.</em></p>
 
 ## Enlaces de interés
 
 [Figma del reto](https://www.figma.com/design/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=0-1&t=J3eaw8cZjFaQHPC0-0)
 
 [Página web desplegada](https://text-encrypter-vert.vercel.app/)
-
 
 <small>Desarrollado por [Diego Ramírez](https://github.com/dieramirezma)</small>
