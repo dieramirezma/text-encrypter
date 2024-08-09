@@ -9,6 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="icon" href="img/logo.svg">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js"></script>
@@ -23,6 +24,7 @@
     <section class="main-section">
       <article class="encrypter">
         <textarea name="text-to-encrypt" class="text-to-encrypt" placeholder="Ingrese el texto aquí"></textarea>
+        <span class="clear-textarea" onclick="clearTextArea()">Limpiar campo</span>
         <span><img src="/img/icon-information.svg" alt="icon-information">Solo letras minúsculas y sin acentos</span>
         <div class="buttons">
           <button class="element-button blue-button" onclick="encryptText()">Encriptar</button>
@@ -58,7 +60,8 @@
         </svg>
       </a>
     </div>
-</footer>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

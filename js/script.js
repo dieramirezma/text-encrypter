@@ -1,3 +1,32 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const $textToEncrypt = document.querySelector('.text-to-encrypt')
+  const $clearTextArea = document.querySelector('.clear-textarea')
+
+  $textToEncrypt.addEventListener('input', () => {
+    if ($textToEncrypt.value !== '') {
+      $clearTextArea.style.display = 'block'
+      $textToEncrypt.style = 'margin-bottom: 8px'
+    } else {
+      $clearTextArea.style.display = 'none'
+    }
+  })
+})
+
+const toast = (message, backgroundColor = "#E74C3C") => {
+  Toastify({
+    text: `${message}`,
+    duration: 3000,
+    close: true,
+    gravity: "top",
+    position: "center",
+    stopOnFocus: true,
+    style: {
+      background: backgroundColor,
+      "border-radius": "12px",
+      "font-weight": "bold",
+    },
+  }).showToast();
+}
 function encryptor(message) {
   const regex = /[aeiou]/g
   return message.replace(regex, (match) => {
@@ -38,11 +67,11 @@ function encryptText() {
   const $textToEncrypt = document.querySelector('.text-to-encrypt')
   const regex = /^[a-zñ0-9.,;:!¡¿?()'"\s-]+$/
   if ($textToEncrypt.value === '') {
-    alert('Por favor, escribe un texto para encriptar.')
+    toast('Por favor, escribe un texto para encriptar.')
     return
   }
   if (!regex.test($textToEncrypt.value)) {
-    alert('Por favor, escribe un texto válido.')
+    toast('Por favor, escribe un texto válido.')
     return
   }
   const encryptedText = encryptor($textToEncrypt.value)
@@ -63,11 +92,11 @@ function decryptText() {
 
   const regex = /^[a-zñ0-9.,;:!¡¿?()'"\s-]+$/
   if ($textToDecrypt.value === '') {
-    alert('Por favor, escribe un texto para desencriptar.')
+    toast('Por favor, escribe un texto para desencriptar.')
     return
   }
   if (!regex.test($textToDecrypt.value)) {
-    alert('Por favor, escribe un texto válido.')
+    toast('Por favor, escribe un texto válido.')
     return
   }
 
@@ -86,6 +115,15 @@ function updateClipboard() {
   const $encryptedTextElement = document.querySelector('.text-encrypted')
 
   navigator.clipboard.writeText($encryptedTextElement.textContent).then(() => {
-    alert('Texto copiado al portapapeles.')
+    toast('Texto copiado al portapapeles.', '#609ED4')
   })
+}
+
+function clearTextArea() {
+  const $textToEncrypt = document.querySelector('.text-to-encrypt')
+  const $clearTextArea = document.querySelector('.clear-textarea')
+
+  $textToEncrypt.value = ''
+  $clearTextArea.style.display = 'none'
+  $textToEncrypt.style = 'margin-bottom: 24px'
 }
