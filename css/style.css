@@ -93,6 +93,7 @@ main {
   cursor: auto;
   scrollbar-width: none;
   scrollbar-color: #888 #f1f1f1;
+  flex: auto;
 }
 
 .text-encrypted:focus {

@@ -72,8 +72,14 @@ function decryptText() {
   }
 
   const decryptedText = decryptor($textToDecrypt.value)
+  const $nonEncrypted = document.querySelector('.non-encrypted')
+  const $copyButton = document.querySelector('.copy-button')
 
   $decryptedTextElement.textContent = decryptedText
+  $decryptedTextElement.style.display = 'block'
+
+  $nonEncrypted.style.display = 'none'
+  $copyButton.style.display = 'block'
 }
 
 function updateClipboard() {
