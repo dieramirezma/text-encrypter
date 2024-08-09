@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const toast = (message, backgroundColor = "#E74C3C") => {
   Toastify({
     text: `${message}`,
-    duration: 3000,
+    duration: 2000,
     close: true,
     gravity: "top",
     position: "center",
@@ -84,6 +84,7 @@ function encryptText() {
 
   $nonEncrypted.style.display = 'none'
   $copyButton.style.display = 'block'
+  toast('Texto encriptado.', '#609ED4')
 }
 
 function decryptText() {
@@ -109,6 +110,7 @@ function decryptText() {
 
   $nonEncrypted.style.display = 'none'
   $copyButton.style.display = 'block'
+  toast('Texto desencriptado.', '#609ED4')
 }
 
 function updateClipboard() {
