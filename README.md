@@ -32,9 +32,6 @@ Las características del encriptador son las siguientes:
 - Extras:
   Contiene un botón que copia el texto encriptado/desencriptado para la sección de transferencia, es decir, mantiene la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
 
-## Tecnologías usadas
-
-
 ## Interfaces
 
 ![Interfaces](https://github.com/user-attachments/assets/4bb8999a-e44d-4bb6-9e71-0be7a08e3e12)
