@@ -26,7 +26,7 @@
     </div>
     <section class="main-section">
       <article class="encrypter">
-        <textarea name="text-to-encrypt" class="text-to-encrypt" placeholder="Ingrese el texto aquí"></textarea>
+        <textarea name="text-to-encrypt" class="text-to-encrypt" placeholder="Ingrese el texto aquí" aria-label="Ingresa tu texto a encriptar o desencriptar"></textarea>
         <span class="clear-textarea" onclick="clearTextArea()">Limpiar campo</span>
         <span><img src="/img/icon-information.svg" alt="icon-information">Solo letras minúsculas y sin acentos</span>
         <div class="buttons">
@@ -35,7 +35,7 @@
         </div>
       </article>
       <article class="text-encrypted-container">
-        <textarea readonly class="text-encrypted"></textarea>
+        <textarea readonly class="text-encrypted" aria-label="Texto encriptado o desencriptado"></textarea>
         <div class="non-encrypted">
           <img id="person" src="img/character.svg" alt="Persona">
           <h2>Ningún mensaje fue encontrado</h2>
