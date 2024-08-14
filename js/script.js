@@ -27,6 +27,7 @@ const toast = (message, backgroundColor = "#E74C3C") => {
     },
   }).showToast();
 }
+
 function encryptor(message) {
   const regex = /[aeiou]/g
   return message.replace(regex, (match) => {
@@ -71,7 +72,11 @@ function encryptText() {
     return
   }
   if (!regex.test($textToEncrypt.value)) {
-    toast('Por favor, escribe un texto válido.')
+    if (/[A-Z]/.test($textToEncrypt.value)) {
+      toast('Por favor, escribe un texto en minúsculas.')
+      return
+    }
+    toast('Por favor, escribe un texto sin caracteres especiales ni acentos.')
     return
   }
   const encryptedText = encryptor($textToEncrypt.value)
@@ -97,7 +102,11 @@ function decryptText() {
     return
   }
   if (!regex.test($textToDecrypt.value)) {
-    toast('Por favor, escribe un texto válido.')
+    if (/[A-Z]/.test($textToDecrypt.value)) {
+      toast('Por favor, escribe un texto en minúsculas.')
+      return
+    }
+    toast('Por favor, escribe un texto sin caracteres especiales ni acentos.')
     return
   }
 
